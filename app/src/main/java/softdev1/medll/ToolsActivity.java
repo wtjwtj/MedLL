@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.Toast;
@@ -16,6 +17,7 @@ import android.widget.Toast;
 public class ToolsActivity extends AppCompatActivity {
 GridView gridView;
     private double bmiErg;
+    private Button mToolsButton1;
 
      static final String[]tools = new String[]{
         "BMI-Rechner","Einheiten-Rechner","Risikoanalyse", "Stopuhr",
@@ -39,7 +41,7 @@ GridView gridView;
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
                 switch (position) {
                     case 0:
-                        newItemInput();
+                        bmiRechner();
                         break;
 
 
@@ -55,7 +57,7 @@ GridView gridView;
 
     }
 
-    void newItemInput(){
+    void bmiRechner(){
 
 
 

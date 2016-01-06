@@ -7,16 +7,18 @@ import android.content.Context;
 import android.os.Bundle;
 
 /**
- * Created by wjwjwt on 14/12/15.
+ * Created by wjwjwt on 31/12/15.
  */
 public class AlertDialogFragment extends DialogFragment {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         Context context = getActivity();
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-
-        AlertDialog dialog= builder.create();
+        AlertDialog.Builder builder = new AlertDialog.Builder(context)
+                .setTitle("ERROR")
+                .setMessage("There was an error")
+                .setPositiveButton("OK", null);
+AlertDialog dialog = builder.create();
         return dialog;
     }
 }

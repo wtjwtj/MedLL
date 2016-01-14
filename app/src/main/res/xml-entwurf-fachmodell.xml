@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE leitlinie SYSTEM "xml-dtd-entwurf.dtd">
+<leitlinie>
+
+	<meta>
+		<titel>Gestationsdiabetes mellitus (GDM)</titel>
+		<awmf>057/008</awmf>
+		<version>0.1</version>
+		<version-ll-xml>0.1</version-ll-xml>
+		<stand>2011-08</stand>
+		<erstellungsdatum>2001</erstellungsdatum>
+		<naechste_ueberpruefung>2016-08</naechste_ueberpruefung>
+		<klasse>S3</klasse>
+		<logo datei="ddg_logo.jpg" />
+		<hinweis>Die &quot;Leitlinien&quot; der Wissenschaftlichen Medizinischen Fachgesellschaften sind systematisch entwickelte Hilfen für Ärzte zur Entscheidungsfindung in spezifischen Situationen. Sie beruhen auf aktuellen wissenschaftlichen Erkenntnissen und in der Praxis bewährten Verfahren und sorgen für mehr Sicherheit in der Medizin, sollen aber auch ökonomische Aspekte berücksichtigen. Die &quot;Leitlinien&quot; sind für Ärzte rechtlich nicht bindend und haben daher weder haftungsbegründende noch haftungsbefreiende Wirkung. Die AWMF erfasst und publiziert die Leitlinien der Fachgesellschaften mit größtmöglicher Sorgfalt - dennoch kann die AWMF für die Richtigkeit des Inhalts keine Verantwortung übernehmen. Insbesondere für Dosierungsangaben sind stets die Angaben der Hersteller zu beachten!</hinweis>
+		<copyright>(c) Deutsche DiabetesGesellschaft</copyright>
+		<untertitel>Evidenzbasierte Leitlinie zu Diagnostik, Therapie u. Nachsorge</untertitel>
+		<untertitel>der Deutschen Diabetes-Gesellschaft (DDG) und der Deutschen Gesellschaft für Gynäkologie und Geburtshilfe (DGGG)</untertitel>
+
+		<herausgeber>
+			<name>M.Keller</name>
+			<institut>DDG</institut>
+		</herausgeber>
+		<herausgeber>
+			<name>S.Matthaei</name>
+			<institut>DDG</institut>
+		</herausgeber>
+		<herausgeber>
+			<name>R.Kreienberg</name>
+			<institut>DGGG</institut>
+		</herausgeber>
+
+		<autor>
+			<name>H.Kleinwechter</name>
+			<institut>diabetologikum kiel, Diabetes-Schwerpunktpraxis und Schulungszentrum, Kiel</institut>
+		</autor>
+		<autor>
+			<name>U.Schäfer-Graf</name>
+			<institut>Berliner Diabeteszentrum für Schwangere, Klinik für Gynäkologie und Geburtshilfe, St.Joseph Krankenhaus, Berlin</institut>
+		</autor>
+		<autor>
+			<name>C.Bührer</name>
+			<institut>Klinik für Neonatologie, Charité Universitätsmedizin, Berlin</institut>
+		</autor>
+		<autor>
+			<name>I.Hoesli</name>
+			<institut>Frauenklinik, Geburtshilfe und Schwangerschaftsmedizin, Universitätsspital Basel, Basel/CH</institut>
+		</autor>
+		<autor>
+			<name>F.Kainer</name>
+			<institut>Klinik und Poliklinik für Frauenheilkunde und Geburtshilfe, Perinatalzentrum Klinikum Innenstadt LMU, München</institut>
+		</autor>
+		<autor>
+			<name>A.Kautzky-Willer</name>
+			<institut>Medizinische Universitätsklinik Wien, Klinik für Innere Medizin III, Abteilung für Endokrinologie u. Stoffwechsel, Gender Medicine Unit, Wien/A</institut>
+		</autor>
+		<autor>
+			<name>B.Pawlowski</name>
+			<institut>Klinik für Stoffwechselkrankheiten, Universitätsklinikum Düsseldorf und Deutsches Diabetes-Zentrum, Düsseldorf</institut>
+		</autor>
+		<autor>
+			<name>K.Schnuck</name>
+			<institut>Klinik für Kinder- und Jugendmedizin, Krankenhaus im Friedrichshain, Berlin</institut>
+		</autor>
+		<autor>
+			<name>T.Somville</name>
+			<institut>Klinik für Geburtshilfe und Pränatalmedizin, Universitätsklinikum Hamburg-Eppendorf, Hamburg</institut>
+		</autor>
+		<autor>
+			<name>M.Sorger</name>
+			<institut>Medizinische Poliklinik, Universitätsklinikum Bonn, Bonn</institut>
+		</autor>
+
+		<weitere_infos>
+			<fliesstext>Erstveröffentlichung 08/2011</fliesstext>
+			<fliesstext>Geplante Überarbeitung 08/2016</fliesstext>
+			<fliesstext>Korrespondenzadressen für die Deutsche Diabetes-Gesellschaft<zeilenumbruch />Dr.med. Helmut Kleinwechter, Sprecher der Expertengruppe &quot;Diabetes und Schwangerschaft&quot; der DDG diabetologikum kiel, Diabetes-Schwerpunktpraxis und Schulungszentrum, Alter Markt 11 u. 14, 24103 Kiel<zeilenumbruch />Tel.: 0431/95807, Fax: 0431/95805, E-mail: arzt@diabetologikum-kiel.de</fliesstext>
+			<fliesstext>Prof. Dr.med. Monika Kellerer, Leitlinienbeauftragte des Vorstands der DDG<zeilenumbruch />Zentrum für Innere Medizin I, Marienhospital Stuttgart, Boheimstr.37, 70199 Stuttgart<zeilenumbruch />Tel.: 0711/64892102, Fax: 0711/64892119, E-Mail: monikakellerer@vinzenz.de</fliesstext>
+			<fliesstext>Korrespondenzadresse für die Deutsche Gesellschaft für Gynäkologie u. Geburtshilfe<zeilenumbruch />PD Dr.med. Ute Schäfer-Graf, Sprecherin der Expertengruppe &quot;Diabetes und Schwangerschaft&quot; der DGGG<zeilenumbruch />Berliner Diabeteszentrum für Schwangere, Klinik für Gynäkologie und Geburtshilfe, St.Joseph Krankenhaus, Wüsthoffstraße 15, 12101 Berlin<zeilenumbruch />Tel.: 030/7882-4214/2236, Fax: 030/7882-2766, E-mail: ute.schaefer-graf@sjk.de</fliesstext>
+		</weitere_infos>
+
+	</meta> 
+
+	<inhalt>
+		<vorbemerkung>
+			<fliesstext>Diese interdisziplinäre, evidenzbasierte S3-Leitlinie (AWMF-Leitlinie 057/008) ist fachgesellschaftsübergreifend und bearbeitet nur den Gestationsdiabetes mellitus (GDM, ICD-10: O24.4G), aber nicht den präkonzeptionell bekannten Diabetes mellitus (Typ-1, Typ-2, spezifische Formen). Die Leitlinie ersetzt die Empfehlungen zur Diagnostik und Therapie des Gestationsdiabetes aus dem Jahr 2001 (AG Diabetes und Schwangerschaft der DDG 2001 EK IV). Diese Leitlinie wird durch eine Kurzfassung als Praxisleitlinie der DDG/DGGG und eine Laienversion für Schwangere und Interessierte ergänzt.</fliesstext>
+			<fliesstext>Für zusätzliche Informationen zum Thema &quot;Diabetes und Schwangerschaft&quot; wird auf folgende Leitlinien und Empfehlungen hingewiesen:</fliesstext>
+			<fliesstext><eingerueckt>Evidenzbasierte Leitlinie Diabetes und Schwangerschaft<zeilenumbruch />AWMF-Leitlinie 057/023<zeilenumbruch />http://www.deutsche-diabetesgesellschaft.de/fileadmin/Redakteur/Leitlinien/Evidenzbasierte_Leitlinien/EBL_Schwangerschaft_2008.pdf</eingerueckt></fliesstext>
+			<fliesstext><eingerueckt>Praxisleitlinie Diabetes und Schwangerschaft<zeilenumbruch />http://www.deutsche-diabetesgesellschaft.de/fileadmin/Redakteur/Leitlinien/Praxisleitlinien/PL_DDG2011_Diab_und_Schwangerschaft.pdf</eingerueckt></fliesstext>
+		</vorbemerkung>
+		<kapitel>
+			<ueberschrift>1 Gesundheitsziele</ueberschrift>
+			<fliesstext>Die International Diabetes Federation (IDF) und die WHO-Europa haben 1989 und 1999 Gesundheitsziele für Schwangerschaften bei Frauen mit Diabetes formuliert (WHO u. IDF Europe 1990 EK IV, WHO Europa 1999 EK IV). Danach sollen Verlauf und Ergebnisse von Schwangerschaften bei Frauen mit Diabetes von 1999 bis zum Jahr 2020 um ein Drittel verbessert werden. Die IDF legte 2009 erstmals eine um den Gestationsdiabetes erweiterte globale Leitlinie zu den Problemen von Diabetes und Schwangerschaft vor (IDF 2009 EK IV). Die IDF stellt fest, dass der GDM mit Komplikationen in der Schwangerschaft assoziiert ist, die durch rechtzeitige Diagnostik und intensive Behandlung abgemildert werden können. Dies bestätigt auch eine systematische Übersicht und Metaanalyse: Therapeutisch effektiv sind sowohl eine Blutglukosesenkende als auch eine spezialisierte geburtsmedizinische Betreuung (Horvath 2010 EK Ia).</fliesstext>
+			<fliesstext><empfehlung haertegrad="B">(1) Die Vorgaben der Gesundheitsziele sollten anhand von Qualitätsindikatoren überprüft werden (siehe Seite 64-65, 9 Qualitätssicherung)</empfehlung></fliesstext>
+		</kapitel>
+		<kapitel>
+			<ueberschrift>2 Definition</ueberschrift>
+			<fliesstext>Gestationsdiabetes mellitus (GDM, ICD-10: O24.4G) ist definiert</fliesstext>
+			<fliesstext>als eine Glukosetoleranzstörung, die erstmals in der Schwangerschaft mit einem 75-g oralen Glukosetoleranztest (oGTT) unter standardisierten Bedingungen und qualitätsgesicherter Glukosemessung aus venösem Plasma diagnostiziert wird. Die Diagnose ist bereits mit einem erhöhten Glukosewert möglich.</fliesstext>
+			<fliesstext>Die diagnostischen Grenzwerte beruhen auf internationaler Konsensbildung durch Experten (IADPSG Consensus Panel 2010 EK IV). Der Experten-Konsensbildung wurden die Ergebnisse einer epidemiologischen Untersuchung mit mütterlichen und neonatalen, klinisch relevanten Endpunkten zugrunde gelegt (HAPO Cooperative Research Group 2008 EK IIb, 2009 EK IIb, 2010 IIb). Alle in der Leitlinie beschriebenen Blutglukosewerte beziehen sich auf Blutplasma.</fliesstext>
+			<fliesstext>Die Übergänge zwischen sog. normaler Glukosetoleranz in der Schwangerschaft und Gestationsdiabetes sind fließend, ein Schwellenwert existiert nicht. Nach internationalem Konsens werden ein bisher unbekannter, manifester Diabetes und eine Hyperglykämie unterschieden, die unterhalb dieser Grenzen liegt und als Gestationsdiabetes, wie oben beschrieben, klassifiziert wird (IADPSG Consensus Panel 2010 EK IV, American Diabetes Association 2011 EK IV). Die Definition des manifesten Diabetes entspricht der außerhalb einer Schwangerschaft. Damit fallen ein manifester Typ-1- oder Typ-2-Diabetes mellitus oder spezifische Diabetesformen, die erstmals während der Schwangerschaft diagnostiziert werden, nicht mehr unter die Diagnoseklasse des Gestationsdiabetes.</fliesstext>
+			<fliesstext><empfehlung haertegrad="A">(1) Das in dieser Leitlinie empfohlene Vorgehen nach IADPSG Consensus Panel soll einheitlich angewendet werden</empfehlung></fliesstext>
+			<kapitel>
+				<ueberschrift>2.1 Pathopsychologie</ueberschrift>
+				<fliesstext>Die Pathophysiologie des Gestationsdiabetes entspricht zu einem großen Teil der des Typ-2- Diabetes. Auf der Basis einer genetischen Prädisposition spielen vor allem Übergewicht und der Lebensstil (Ernährung, Bewegung) der Frauen eine große Rolle. Die in der zweiten Schwangerschaftshälfte physiologisch einsetzende Insulinresistenz führt im Falle eines Gestationsdiabetes bei gleichzeitig vorliegendem (zumindest relativem) Insulinsekretionsdefekt zur Hyperglykämie in der Gravidität. Neben den hormonellen Veränderungen in der Gravidität dürften auch eine veränderte Freisetzung von Adipokinen und Zytokinen aus dem Fettgewebe und der Plazenta eine Rolle spielen.</fliesstext>
+				<fliesstext>Die zugrundeliegenden pathophysiologischen Mechanismen sind in Analogie zum heterogenen Erscheinungsbild des GDM unterschiedlich und bislang – wie bei Diabetes im Allgemeinen - nicht vollständig geklärt (Metzger 2007 EK IV). Kausal dürfte beim klassischen Bild des GDM eine chronische, d.h. bereits präkonzeptionell bestehende, Herabsetzung der Insulinsensitivität bestehen, die zusätzlich durch die ab der 20. Schwangerschaftswoche zunehmende physiologische Insulinresistenz verstärkt wird und durch die endogene Insulinsekretion nur unzureichend kompensiert werden kann (=relativer Insulinmangel [Kautzky 1997 EK IIa]). Für die Insulinresistenz ebenso wie für die Insulinsekretionsstörung liegt teilweise eine genetische Prädisposition vor, wobei aber die Ausprägung durch Umweltfaktoren, den Lebensstil (hochkalorische Ernährung/&quot;fast food&quot; und Bewegungsmangel), insbesondere Übergewicht, wesentlich beeinflusst wird. Frauen, die einen Gestationsdiabetes entwickeln, weisen meist die gleichen Risikofaktoren wie Frauen mit einem Typ-2-Diabetes auf. Ebenso wurden eine ungünstige Veränderung im Sekretionsmuster von Adipokinen, insbesondere eine Verminderung von Adiponektin und eine Zunahme von Leptin, sowie ein Anstieg von TNF , beim GDM beschrieben (Kautzky 2004 EK III, Catalano 2008 EK III). Genomweite Assoziationsstudien weisen beim GDM auf die gleichen Kandidatgene wie für den Typ-2-Diabetes hin (Watanabe 2007 EK III).</fliesstext>
+				<fliesstext>Aufgrund dieser typischen metabolischen Veränderungen und dem Vorliegen von Übergewicht bei der Großzahl der betroffenen Schwangeren wird der &quot;klassische&quot; GDM als eine Form des Prä-Typ-2- Diabetes angesehen, welcher durch eine erhebliche Insulinresistenz und eine gestörte Beta- Zellfunktion (Frühphasen-Sekretionsdefekt) charakterisiert ist (Kim 2002 EK III, Kautzky 2005 EK IIb). GDM kann daher meistens als eine chronische Funktionsstörung beschrieben werden, gekennzeichnet durch eine Insulinresistenz mit abfallender ß-Zell-Kompensation, die nur durch ein Glukosescreening als Routine-Maßnahme in der Schwangerschaft entdeckt wird (Xiang 2010 EK IIa).</fliesstext>
+			</kapitel>
+		</kapitel>
+		<kapitel>
+			<ueberschrift>3 Epidemiologie</ueberschrift>
+			<fliesstext>Die Häufigkeit des GDM ist von folgenden Einflussfaktoren abhängig:<zeilenumbruch /><eingerueckt>der epidemiologischen Untersuchung verschiedener Bevölkerungsgruppen (z.B. Kaukasierinnen, Asiatinnen, Lateinamerikanerinnen [sog. Hispanierinnen], Pima- Indianerinnen),<zeilenumbruch />der Untersuchung von Volksgruppen unterschiedlicher genetischer Belastung mit Typ-2- Diabetes und damit unterschiedlichem Prä-Test-Risiko (z.B. Europäer vs. Inder),<zeilenumbruch />der Untersuchung nur von Risikogruppen (z.B. Adipöse, ältere Schwangere) oder allen Schwangeren einer Population,<zeilenumbruch />dem Zeitpunkt der Untersuchung (Frühschwangerschaft, 24-28 SSW, nach 32 SSW),<zeilenumbruch />der Untersuchung mittels vorgeschalteter Screeningverfahren (Uringlukose, Gelegenheitsglukose, Nüchternglukose, 50-g GCT mit unterschiedlichen Screening- Schwellen) oder ohne vorgeschaltetes Screening,<zeilenumbruch />dem diagnostischen Testverfahren (Menge der Glukose: 50 g [ehemalige DDR, Dänemark], 75 g [Europa], 100 g oGTT [Nordamerika]), der Anzahl der erhobenen Messwerte (1, 2, 3, 4 oder mehr), der Anzahl der erreichten oder überschrittenen Grenzwerte (1 oder 2), der Qualität der Glukosemessung (unzureichender vs. adäquater Laborstandard), der Verwendung des Blutmediums (venöses Plasma vs. kapilläres Vollblut), der präanalytischen Verarbeitung abgenommener Blutproben (Glykolyse unzentrifugierter venöser Vollblut- Blutproben) und der enzymatischen Methode der Blutglukosemessung,<zeilenumbruch />den von Arbeitsgruppen und Fachgesellschaften durch Expertenmeinung festgelegten diagnostischen Grenzwerten.	</eingerueckt></fliesstext>
+			<fliesstext>Nach Literaturangaben der letzten 20 Jahre variierten die Prävalenzen des GDM zwischen 0,6% und 22 % (King 1998 EK IV, Murgia 2006 EK IV), vereinzelt noch niedriger oder auch höher. Je häufiger nach einem GDM bei Schwangeren gesucht wird, je höher die Diabetesrisiken allgemein sind und je niedriger die diagnostischen Grenzen liegen, umso &quot;häufiger&quot; wird ein GDM diagnostiziert.</fliesstext>
+			<fliesstext>Im Jahr 2010 wurden in Deutschland rund 650.000 Neugeborene von der Perinatalstatistik beim Institut für angewandte Qualitätsförderung und Forschung im Gesundheitswesen GmbH (AQUA) erfasst. Das AQUA-Institut hat die Bundesgeschäftsstelle für Qualitätssicherung (BQS) ab 1.1.2010 bei der Bundesauswertung &quot;Geburtshilfe&quot; abgelöst. Die ausgewerteten Daten repräsentieren 99,2% der erwarteten Geburten aus 821 Kliniken. Bei den Müttern lag in 23.872 Fällen (3,7%) ein Gestationsdiabetes vor (AQUA 2011 IIb). Der seit 2002 dokumentierte, ständige Anstieg der Fälle von GDM (2007 bis 2008: +25%) setzt sich nach vorübergehender Stagnation 2009 aktuell fort (Abb.1+2).</fliesstext>
+			<grafik datei="abbildung1.jpg">Abb.1<zeilenumbruch />Relative Häufigkeiten des Gestationsdiabetes in Deutschland 2002-2010</grafik>
+			<grafik datei="abbildung2.jpg">Abb.2<zeilenumbruch />Absolute Häufigkeiten des Gestationsdiabetes in Deutschland 2002-2010</grafik>
+			<fliesstext>Zum Zeitpunkt der Geburt ist die GDM-Prävalenz in Deutschland von 2002 bis 2010 relativ um das 2,52-fache angestiegen. Nach den Festlegungen des IADPSG Consensus Panel beträgt die um manifeste Diabetesfälle bereinigte Netto-GDM-Prävalenz im HAPO-Studienkollektiv nach epidemiologischen Maßstäben und methodisch optimierter Blutglukosemessung 16,1% (IADPSG Consensus Panel 2010 EK IV, Nesbitt 2006 EK IIb, Bruns 2009 EK IV).</fliesstext>
+			<fliesstext><empfehlung haertegrad="B">(1) Bei der regionalen Versorgung sollte die erhobene GDM-Prävalenz beachtet und der Versorgungsgrad angepasst werden.</empfehlung></fliesstext>
+		</kapitel>
+
+
+		<glossar>
+			<begriff>
+				<abk>ACE</abk>
+				<ausgeschrieben>Angiotensin Converting Enzyme</ausgeschrieben>
+			</begriff>
+			<begriff>
+				<abk>ACOG</abk>
+				<ausgeschrieben>American College of Obstetricians and Gynecologists</ausgeschrieben>
+			</begriff>
+		</glossar>
+
+		<literatur>
+			<quelle id="1">ACOG Practice Bulletin. Clinical management guidelines for obstetrician-gynecologists. Number 30, September 2001 (replaces Technical Bulletin Number 200, December 1994). Gestational diabetes. Obstet Gynecol 2001;98: 525-538.</quelle>
+			<quelle id="2">Agarwal M, Dhatt G, Punnose J. Gestational diabetes: utility of fasting plasma glucose as a screening test depends on the diagnostic criteria. Diabet Med 2006;23:1319-1326.</quelle>
+		</literatur>
+
+		<kapitel>
+			<ueberschrift>12 Flussdiagramm: Diagnostik der Hyperglykämie in der Schwangerschaft</ueberschrift>
+			<grafik datei="flussdiagramm.jpg" />
+		</kapitel>
+		<kapitel>
+			<ueberschrift>13 Diabetes-Risikotabelle</ueberschrift>
+			<fliesstext><eingerahmt>Alter &gt; 45 Jahre<zeilenumbruch />BMI &gt; 30 kg/m² präkonzeptionell<zeilenumbruch />Körperliche Inaktivität<zeilenumbruch />Eltern oder Geschwister mit Diabetes<zeilenumbruch />Angehörige einer ethnischen Risikopopulation (z.B. Asiatinnen, Lateinamerikanerinnen)<zeilenumbruch />Geburt eines Kindes &gt;4500 g<zeilenumbruch />GDM in der Vorgeschichte<zeilenumbruch />Arterielle Hypertonie (Blutdruck &gt;140/90 mmHg) oder Einnahme von Medikamenten zur Therapie der arteriellen Hypertonie<zeilenumbruch />Dyslipidämie präkonzeptionell (HDL &lt;35 mg/ld [0,9 mmol/l] und/oder Triglyceride &gt;250 mg/dl [2,82 mmol/l])<zeilenumbruch />Polyzystisches Ovarsyndrom<zeilenumbruch />Prädiabetes (IGT/IFG/HbA1c &gt;5,7%) bei früherem Test (unabhängig von früherem GDM)<zeilenumbruch />Andere klinische Zustände, die mit Insulinrsistenz assoziiert sind (z.B. Acanthosis nigricans)<zeilenumbruch />Vorgeschichte mit KHK, pAVK, zerebral-arterieller Durchblutungsstörung<zeilenumbruch />Einnahme kontrainsulinärer Medikation (z.B. Glukokortikoide)</eingerahmt></fliesstext>
+		</kapitel>
+
+	</inhalt>
+
+</leitlinie>

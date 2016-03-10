@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MedLL</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tools">Tools</string>
+    <string name="bmi_gewicht">Gewicht in Kilogramm</string>
+    <string name="bmi_größe">Größe in Metern</string>
+</resources>

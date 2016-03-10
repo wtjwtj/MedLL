@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<GridView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_tools"
+    tools:context="softdev1.medll.ToolsActivity"
+    android:id="@+id/toolsGrid"
+    android:numColumns="auto_fit"
+    android:gravity="center"
+    android:columnWidth="130dp"
+    android:stretchMode="columnWidth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="60dp">
+
+</GridView>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#595959"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+        <Button android:text="Home"
+            android:id="@+id/Button01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="-3dip">
+        </Button>
+        <Button android:text="Last"
+            android:id="@+id/LastButton"
+            android:layout_toRightOf="@+id/Button01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="-3dip"
+            android:layout_marginRight="-3dip">
+        </Button>
+        <Button android:text="Tools"
+            android:id="@+id/ToolsButton"
+            android:layout_toRightOf="@+id/Button01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="-3dip"
+            >
+        </Button>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

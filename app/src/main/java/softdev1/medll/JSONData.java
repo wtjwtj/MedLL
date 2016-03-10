@@ -12,7 +12,11 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 /**
  * Created by Tyrael on 09.01.2016.
+<<<<<<< HEAD
  *
+=======
+ *
+>>>>>>> 04581527e28b284deb14f4ba5b5e47b61fbd4dcb
 public class JSONData {
     private ArrayList<String> kapitelName;
 
@@ -91,4 +95,5 @@ public class JSONData {
     }
 
 }
+<<<<<<< HEAD
 */

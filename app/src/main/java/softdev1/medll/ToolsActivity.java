@@ -16,12 +16,12 @@ import android.widget.Toast;
 
 
 public class ToolsActivity extends AppCompatActivity {
-GridView gridView;
+    GridView gridView;
     private double bmiErg;
     private Button mToolsButton1;
 
-     static final String[]tools = new String[]{
-        "BMI-Rechner","Einheiten-Rechner","Risikoanalyse", "Stopuhr",
+    static final String[]tools = new String[]{
+            "BMI-Rechner","Einheiten-Rechner","Risikoanalyse", "Stopuhr",
 
     };
     @Override
@@ -75,7 +75,7 @@ GridView gridView;
             @Override
             public void onClick(DialogInterface dialog, int whichButton) {
 
-AlertDialog aDialog = (AlertDialog)dialog;
+                AlertDialog aDialog = (AlertDialog)dialog;
                 EditText item_gew = (EditText) aDialog.findViewById(R.id.bmi_gewicht);
                 EditText item_gro = (EditText) aDialog.findViewById(R.id.bmi_groesse);
                 //edittext to string

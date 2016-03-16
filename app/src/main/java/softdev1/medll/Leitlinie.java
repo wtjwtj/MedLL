@@ -1,5 +1,8 @@
 package softdev1.medll;
 
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Created by wjwjwt on 04/01/16.
  */
@@ -7,7 +10,7 @@ public class Leitlinie {
     private Titel mTitel;
     private Meta[] mMeta;
     private Autorj[] mAutorj;
-
+    private  Map<String, Set<String>> mContent;
     public Titel getTitel() {
         return mTitel;
     }
@@ -30,5 +33,11 @@ public class Leitlinie {
 
     public void setAutorj(Autorj[] autorj) {
         mAutorj = autorj;
+    }
+
+    public  Map<String, Set<String>> getmContent(){ return mContent;}
+    public String getChapterName(int i){
+        Object[] child= mContent.get(i).toArray();
+       return child[i].toString();
     }
 }

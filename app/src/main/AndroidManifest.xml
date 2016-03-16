@@ -16,11 +16,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-<<<<<<< HEAD
+        android:name="softdev1.medll.ExpandableListApplication"
         android:theme="@style/AppTheme">
-=======
-        android:theme="@style/AppTheme" >
->>>>>>> 04581527e28b284deb14f4ba5b5e47b61fbd4dcb
         <activity
             android:name=".LeitlinieMain"
             android:label="@string/app_name"
@@ -32,15 +29,6 @@
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
-            android:name=".ExpandableListApplication"
-            android:parentActivityName=".LeitlinieMain"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-        ></activity>
-        <activity
-=======
->>>>>>> 04581527e28b284deb14f4ba5b5e47b61fbd4dcb
             android:name=".ToolsActivity"
             android:label="@string/title_activity_tools"
             android:parentActivityName=".LeitlinieMain"
@@ -49,15 +37,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="softdev1.medll.LeitlinieMain" />
         </activity>
-<<<<<<< HEAD
 
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-=======
->>>>>>> 04581527e28b284deb14f4ba5b5e47b61fbd4dcb
     </application>
 
 </manifest>

@@ -11,12 +11,14 @@ import com.android.volley.toolbox.Volley;
 /**
  * Created by Thot on 09.03.2016.
  */
-public class ExpandableListApplication extends AppCompatActivity {
+public class ExpandableListApplication extends Application {
 
         private RequestQueue mRequestQueue;
         private static ExpandableListApplication mInstance;
+         private ImageLoader mImageLoader;
 
         public void onCreate() {
+            super.onCreate();
             mInstance = this;
         }
 
@@ -42,7 +44,14 @@ public class ExpandableListApplication extends AppCompatActivity {
             getReqQueue().add(req);
         }
 
-
+    public ImageLoader getImageLoader() {
+        getReqQueue();
+        if (mImageLoader == null) {
+            mImageLoader = new ImageLoader(this.mRequestQueue,
+                    new BitmapLruCache());
+        }
+        return this.mImageLoader;
+    }
 
         public void cancelPendingReq(Object tag) {
             if (mRequestQueue != null) {

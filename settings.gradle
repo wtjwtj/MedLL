@@ -1,5 +1,3 @@
-<<<<<<< HEAD
 include ':app', ':volley'
-=======
-include ':app'
->>>>>>> 04581527e28b284deb14f4ba5b5e47b61fbd4dcb
+
+

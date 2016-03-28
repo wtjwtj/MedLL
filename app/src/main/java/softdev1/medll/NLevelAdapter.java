@@ -7,12 +7,19 @@ package softdev1.medll;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.content.Context;
 import android.os.AsyncTask;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
 
 public class NLevelAdapter extends BaseAdapter {
+    private Context context;
 
     List<NLevelItem> list;
     List<NLevelListItem> filtered;
@@ -102,4 +109,5 @@ public class NLevelAdapter extends BaseAdapter {
     public void toggle(int arg2) {
         filtered.get(arg2).toggle();
     }
+
 }

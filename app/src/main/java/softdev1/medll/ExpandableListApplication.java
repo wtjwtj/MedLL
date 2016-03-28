@@ -5,57 +5,40 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.ImageScaleType;
+import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 
 /**
  * Created by Thot on 09.03.2016.
  */
 public class ExpandableListApplication extends Application {
 
-        private RequestQueue mRequestQueue;
-        private static ExpandableListApplication mInstance;
-         private ImageLoader mImageLoader;
+    private RequestQueue mRequestQueue;
+    private static ExpandableListApplication mInstance;
+    private ImageLoader mImageLoader;
 
-        public void onCreate() {
-            super.onCreate();
-            mInstance = this;
-        }
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-        public static synchronized ExpandableListApplication getInstance() {
-            return mInstance;
-        }
+        // UNIVERSAL IMAGE LOADER SETUP
+        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
+                .cacheOnDisc(true).cacheInMemory(true)
+                .imageScaleType(ImageScaleType.EXACTLY)
+                .displayer(new FadeInBitmapDisplayer(300)).build();
 
-        public RequestQueue getReqQueue() {
-            if (mRequestQueue == null) {
-                mRequestQueue = Volley.newRequestQueue(getApplicationContext());
-            }
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
+                getApplicationContext())
+                .defaultDisplayImageOptions(defaultOptions)
+                .memoryCache(new WeakMemoryCache())
+                .discCacheSize(100 * 1024 * 1024).build();
 
-            return mRequestQueue;
-        }
-
-        public <T> void addToReqQueue(Request<T> req, String tag) {
-
-            getReqQueue().add(req);
-        }
-
-        public <T> void addToReqQueue(Request<T> req) {
-
-            getReqQueue().add(req);
-        }
-
-    public ImageLoader getImageLoader() {
-        getReqQueue();
-        if (mImageLoader == null) {
-            mImageLoader = new ImageLoader(this.mRequestQueue,
-                    new BitmapLruCache());
-        }
-        return this.mImageLoader;
+        ImageLoader.getInstance().init(config);
+        // END - UNIVERSAL IMAGE LOADER SETUP
     }
-
-        public void cancelPendingReq(Object tag) {
-            if (mRequestQueue != null) {
-                mRequestQueue.cancelAll(tag);
-            }
-        }
-    }
+}

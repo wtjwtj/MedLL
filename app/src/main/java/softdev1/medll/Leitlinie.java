@@ -36,8 +36,8 @@ public class Leitlinie {
     }
 
     public  Map<String, Set<String>> getmContent(){ return mContent;}
-    public String getChapterName(int i){
-        Object[] child= mContent.get(i).toArray();
-       return child[i].toString();
+    public String getChapterName(){
+        Object[] child= mContent.get("text").toArray();
+       return child.toString();
     }
 }

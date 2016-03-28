@@ -8,12 +8,6 @@
     tools:showIn="@layout/activity_leitlinie_main" tools:context=".LeitlinieMain">
 
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
-    </ListView>
-
     <LinearLayout android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -22,6 +16,7 @@
         android:background="#595959"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true">
+
         <Button android:text="Home"
             android:id="@+id/Button01"
             android:layout_width="fill_parent"

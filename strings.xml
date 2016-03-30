@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MedLL</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_tools">Tools</string>
+    <string name="bmi_gewicht">Gewicht in Kilogramm</string>
+    <string name="bmi_größe">Größe in Metern</string>
+    <string-array name="einheiten_rechner">
+        <item>g to kg</item>
+        <item>g to mg</item>
+        <item>kg to g</item>
+        <item>kg to mg</item>
+        <item>mg to g</item>
+        <item>mg to kg</item>
+    </string-array>
+</resources>

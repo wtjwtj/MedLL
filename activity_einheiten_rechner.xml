@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".einheitenRechner">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:paddingTop="32dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:background="@drawable/back"
+        android:id="@+id/rechn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:paddingTop="32dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:background="@drawable/back"
+        android:id="@+id/erg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rechn"
+        android:layout_alignRight="@+id/rechn"
+        android:layout_alignEnd="@+id/rechn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berechnen"
+        android:id="@+id/button"
+        android:layout_below="@+id/erg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:background="#7a1a1919"
+        android:entries="@array/einheiten_rechner"
+        android:layout_alignTop="@+id/rechn"
+        android:layout_alignBottom="@+id/erg"
+        android:layout_toEndOf="@+id/rechn"
+        android:layout_toRightOf="@+id/rechn"/>
+
+</RelativeLayout>
+

@@ -66,6 +66,7 @@ import java.util.Set;
 
 public class LeitlinieMain extends AppCompatActivity {
     private Button mToolsButton;
+    private Button mHomebutton;
     public static final String TAG = LeitlinieMain.class.getSimpleName();
     private Leitlinie mLeitlinie;
     // ExpandableListAdapter listAdapter;
@@ -79,7 +80,7 @@ public class LeitlinieMain extends AppCompatActivity {
     List<NLevelItem> list;
     ListView listView;
     JSONObject leitlinienJsonObject;
-    String jsonData ="{ \"leitlinie\": { \"meta\":[{ \"titel\": \"Gestationsdiabetes mellitus (GDM)\" }, { \"awmf\": \"057/008\" }, { \"version\": \"0.1\" }, { \"version-ll-json\": \"0.1\"	}, { \"stand\": \"2011-08\" }, { \"erstellungsdatum\": \"2001\" }, { \"naechsteUeberpruefung\": \"2016-06\" }, { \"klasse\": \"S3\" }, { \"logo\":	\"platzhalter\" }, { \"hinweis\": \"Die Leitlinien der Wissenschaftlichen Medizinischen Fachgesellschaften sind systematisch entwickelte Hilfen für Ärzte zur Entscheidungsfindung in spezifischen Situationen. Sie beruhen auf aktuellen wissenschaftlichen Erkenntnissen und in der Praxis bewährten Verfahren und sorgen für mehr Sicherheit in der Medizin, sollen aber auch ökonomische Aspekte berücksichtigen. Die Leitlinien sind für Ärzte rechtlich nicht bindend und haben daher weder haftungsbegründende noch haftungsbefreiende Wirkung. Die AWMF erfasst und publiziert die Leitlinien der Fachgesellschaften mit größtmöglicher Sorgfalt - dennoch kann die AWMF für die Richtigkeit des Inhalts keine Verantwortung übernehmen. Insbesondere für Dosierungsangaben sind stets die Angaben der Hersteller zu beachten!\" }, { \"copyright\": \"(c)Deutsche DiabetesGesellschaft\" }, { \"untertitel\": \"Evidenzbasierte Leitlinie zu Diagnostik, Therapie u. Nachsorge der Deutschen Diabetes-Gesellschaft (DDG) und der Deutschen Gesellschaft für Gynäkologie und Geburtshilfe (DGGG)\" }, {	\"autor\": [ { \"name\": \"H.Kleinwechter\", \"institut\": \"diabetologikum kiel, Diabetes-Schwerpunktpraxis und Schulungszentrum, Kiel\" }, { \"name\": \"U.Schäfer-Graf\", \"institut\": \"Berliner Diabeteszentrum für Schwangere, Klinik für Gynäkologie und Geburtshilfe, St.Joseph Krankenhaus, Berlin\" }, { \"name\": \"C.Bührer\", \"institut\": \"Klinik für Neonatologie, Charité Universitätsmedizin, Berlin\" }, { \"name\": \"I.Hoesli\", \"institut\": \"Frauenklinik, Geburtshilfe und Schwangerschaftsmedizin, Universitätsspital Basel, Basel/CH\" }, { \"name\": \"F.Kainer\", \"institut\": \"Klinik und Poliklinik für Frauenheilkunde und Geburtshilfe, Perinatalzentrum Klinikum Innenstadt LMU, München\" }, { \"name\": \"A.Kautzky-Willer\", \"institut\": \"Medizinische Universitätsklinik Wien, Klinik für Innere Medizin III, Abteilung für Endokrinologie u. Stoffwechsel, Gender Medicine Unit, Wien/A\" }, { \"name\": \"B.Pawlowski\", \"institut\": \"Klinik für Stoffwechselkrankheiten, Universitätsklinikum Düsseldorf und Deutsches Diabetes-Zentrum, Düsseldorf\" }, { \"name\": \"K.Schnuck\", \"institut\": \"Klinik für Kinder- und Jugendmedizin, Krankenhaus im Friedrichshain, Berlin\" }, { \"name\": \"T.Somville\", \"institut\": \"Klinik für Geburtshilfe und Pränatalmedizin, Universitätsklinikum Hamburg-Eppendorf, Hamburg\" }, { \"name\": \"M.Sorger\", \"institut\": \"Medizinische Poliklinik, Universitätsklinikum Bonn, Bonn\" } ]}, { \"weitereInfos\": [ { \"text\":\"Erstveröffentlichung 08/2011\" }, { \"text\":\"Geplante Ãœberarbeitung 08/2016\" }, { \"text\":\"Korrespondenzadressen für die Deutsche Diabetes-Gesellschaft\n Dr.med. Helmut Kleinwechter, Sprecher der Expertengruppe &quot;Diabetes und Schwangerschaft&quot; der DDG diabetologikum kiel, Diabetes-Schwerpunktpraxis und Schulungszentrum, Alter Markt 11 u. 14, 24103 Kiel\n Tel.: 0431/95807, Fax: 0431/95805, E-mail: arzt@diabetologikum-kiel.de\" }, { \"text\":\"Prof. Dr.med. Monika Kellerer, Leitlinienbeauftragte des Vorstands der DDG\n Zentrum für Innere Medizin I, Marienhospital Stuttgart, Boheimstr.37, 70199 Stuttgart\nTel.: 0711/64892102, Fax: 0711/64892119, E-Mail: monikakellerer@vinzenz.de\" }, { \"text\":\"Korrespondenzadresse für die Deutsche Gesellschaft für Gynäkologie u. Geburtshilfe\nPD Dr.med. Ute Schäfer-Graf, Sprecherin der Expertengruppe Diabetes und Schwangerschaft der DGGG\nBerliner Diabeteszentrum für Schwangere, Klinik für Gynäkologie und Geburtshilfe, St.Joseph Krankenhaus, Wüsthoffstraße 15, 12101 Berlin\nTel.: 030/7882-4214/2236, Fax: 030/7882-2766, E-mail: ute.schaefer-graf@sjk.de\" } ]}], \"inhalt\":[ { \"vorbemerkung\":[ { \"text\":\"Diese interdisziplinäre, evidenzbasierte S3-Leitlinie (AWMF-Leitlinie 057/008) ist fachgesellschaftsübergreifend und bearbeitet nur den Gestationsdiabetes mellitus (GDM, ICD-10: O24.4G), aber nicht den präkonzeptionell bekannten Diabetes mellitus (Typ-1, Typ-2, spezifische Formen). Die Leitlinie ersetzt die Empfehlungen zur Diagnostik und Therapie des Gestationsdiabetes aus dem Jahr 2001 (AG Diabetes und Schwangerschaft der DDG 2001 EK IV). Diese Leitlinie wird durch eine Kurzfassung als Praxisleitlinie der DDG/DGGG und eine Laienversion für Schwangere und Interessierte ergänzt.\" }, { \"text\":\"Für zusätzliche Informationen zum Thema Diabetes und Schwangerschaft wird auf folgende Leitlinien und Empfehlungen hingewiesen\" }, { \"text\":\"\tEvidenzbasierte Leitlinie Diabetes und Schwangerschaft\nAWMF-Leitlinie 057/023\nhttp://www.deutsche-diabetesgesellschaft.de/fileadmin/Redakteur/Leitlinien/Evidenzbasierte_Leitlinien/EBL_Schwangerschaft_2008.pdf\" }, { \"text\":\"\tPraxisleitlinie Diabetes und Schwangerschaft\nttp://www.deutsche-diabetesgesellschaft.de/fileadmin/Redakteur/Leitlinien/Praxisleitlinien/PL_DDG2011_Diab_und_Schwangerschaft.pdf\" }]}, {\"kapitel 1\":[ { \"ueberschrift\":\"1 Gesundheitsziele\" }, { \"text\":\"Die International Diabetes Federation (IDF) und die WHO-Europa haben 1989 und 1999 Gesundheitsziele für Schwangerschaften bei Frauen mit Diabetes formuliert (WHO u. IDF Europe 1990 EK IV, WHO Europa 1999 EK IV). Danach sollen Verlauf und Ergebnisse von Schwangerschaften bei Frauen mit Diabetes von 1999 bis zum Jahr 2020 um ein Drittel verbessert werden. Die IDF legte 2009 erstmals eine um den Gestationsdiabetes erweiterte globale Leitlinie zu den Problemen von Diabetes und Schwangerschaft vor (IDF 2009 EK IV). Die IDF stellt fest, dass der GDM mit Komplikationen in der Schwangerschaft assoziiert ist, die durch rechtzeitige Diagnostik und intensive Behandlung abgemildert werden können. Dies bestätigt auch eine systematische Ãœbersicht und Metaanalyse: Therapeutisch effektiv sind sowohl eine Blutglukosesenkende als auch eine spezialisierte geburtsmedizinische Betreuung (Horvath 2010 EK Ia).\" }, { \"text\":\"(haertegrad B) Die Vorgaben der Gesundheitsziele sollten anhand von Qualitätsindikatoren überprüft werden (siehe Seite 64-65, 9 Qualitätssicherung)\" }]}, {\"kapitel 2\":[ {\"ueberschrift\":\"2 Definition\" }, { \"text\": \"Gestationsdiabetes mellitus (GDM, ICD-10: O24.4G) ist definiert\" }, { \"text\": \"als eine Glukosetoleranzstörung, die erstmals in der Schwangerschaft mit einem 75-g oralen Glukosetoleranztest (oGTT) unter standardisierten Bedingungen und qualitätsgesicherter Glukosemessung aus venösem Plasma diagnostiziert wird. Die Diagnose ist bereits mit einem erhöhten Glukosewert möglich.\" }, { \"text\": \"Die diagnostischen Grenzwerte beruhen auf internationaler Konsensbildung durch Experten (IADPSG Consensus Panel 2010 EK IV). Der Experten-Konsensbildung wurden die Ergebnisse einer epidemiologischen Untersuchung mit mütterlichen und neonatalen, klinisch relevanten Endpunkten zugrunde gelegt (HAPO Cooperative Research Group 2008 EK IIb, 2009 EK IIb, 2010 IIb). Alle in der Leitlinie beschriebenen Blutglukosewerte beziehen sich auf Blutplasma.\" }, { \"text\":  \"Die Ãœbergänge zwischen sog. normaler Glukosetoleranz in der Schwangerschaft und Gestationsdiabetes sind fließend, ein Schwellenwert existiert nicht. Nach internationalem Konsens werden ein bisher unbekannter, manifester Diabetes und eine Hyperglykämie unterschieden, die unterhalb dieser Grenzen liegt und als Gestationsdiabetes, wie oben beschrieben, klassifiziert wird (IADPSG Consensus Panel 2010 EK IV, American Diabetes Association 2011 EK IV). Die Definition des manifesten Diabetes entspricht der außerhalb einer Schwangerschaft. Damit fallen ein manifester Typ-1- oder Typ-2-Diabetes mellitus oder spezifische Diabetesformen, die erstmals während der Schwangerschaft diagnostiziert werden, nicht mehr unter die Diagnoseklasse des Gestationsdiabetes.\" }, { \"text\": \"(haertegrad A) Das in dieser Leitlinie empfohlene Vorgehen nach IADPSG Consensus Panel soll einheitlich angewendet werden\" }, {\"kapitel 2.1\"	:[ { \"ueberschrift\":\"2.1 Pathopsychologie\" }, { \"text\": \"Die Pathophysiologie des Gestationsdiabetes entspricht zu einem großen Teil der des Typ-2- Diabetes. Auf der Basis einer genetischen Prädisposition spielen vor allem Ãœbergewicht und der Lebensstil (Ernährung, Bewegung) der Frauen eine große Rolle. Die in der zweiten Schwangerschaftshälfte physiologisch einsetzende Insulinresistenz führt im Falle eines Gestationsdiabetes bei gleichzeitig vorliegendem (zumindest relativem) Insulinsekretionsdefekt zur Hyperglykämie in der Gravidität. Neben den hormonellen Veränderungen in der Gravidität dürften auch eine veränderte Freisetzung von Adipokinen und Zytokinen aus dem Fettgewebe und der Plazenta eine Rolle spielen.\"}, { \"text\": \"Die zugrundeliegenden pathophysiologischen Mechanismen sind in Analogie zum heterogenen Erscheinungsbild des GDM unterschiedlich und bislang â€“ wie bei Diabetes im Allgemeinen - nicht vollständig geklärt (Metzger 2007 EK IV). Kausal dürfte beim klassischen Bild des GDM eine chronische, d.h. bereits präkonzeptionell bestehende, Herabsetzung der Insulinsensitivität bestehen, die zusätzlich durch die ab der 20. Schwangerschaftswoche zunehmende physiologische Insulinresistenz verstärkt wird und durch die endogene Insulinsekretion nur unzureichend kompensiert werden kann (=relativer Insulinmangel [Kautzky 1997 EK IIa]). Für die Insulinresistenz ebenso wie für die Insulinsekretionsstörung liegt teilweise eine genetische Prädisposition vor, wobei aber die Ausprägung durch Umweltfaktoren, den Lebensstil (hochkalorische Ernährung fast food und Bewegungsmangel), insbesondere Ãœbergewicht, wesentlich beeinflusst wird. Frauen, die einen Gestationsdiabetes entwickeln, weisen meist die gleichen Risikofaktoren wie Frauen mit einem Typ-2-Diabetes auf. Ebenso wurden eine ungünstige Veränderung im Sekretionsmuster von Adipokinen, insbesondere eine Verminderung von Adiponektin und eine Zunahme von Leptin, sowie ein Anstieg von TNF , beim GDM beschrieben (Kautzky 2004 EK III, Catalano 2008 EK III). Genomweite Assoziationsstudien weisen beim GDM auf die gleichen Kandidatgene wie für den Typ-2-Diabetes hin (Watanabe 2007 EK III).\" }, { \"text\": \"Aufgrund dieser typischen metabolischen Veränderungen und dem Vorliegen von Ãœbergewicht bei der Großzahl der betroffenen Schwangeren wird der klassische GDM als eine Form des Prä-Typ-2- Diabetes angesehen, welcher durch eine erhebliche Insulinresistenz und eine gestörte Beta- Zellfunktion (Frühphasen-Sekretionsdefekt) charakterisiert ist (Kim 2002 EK III, Kautzky 2005 EK IIb). GDM kann daher meistens als eine chronische Funktionsstörung beschrieben werden, gekennzeichnet durch eine Insulinresistenz mit abfallender ß-Zell-Kompensation, die nur durch ein Glukosescreening als Routine-Maßnahme in der Schwangerschaft entdeckt wird (Xiang 2010 EK IIa).\" } ]}]}, {\"kapitel 3\"	:[ { \"ueberschrift\": \"3 Epidemologie\" }, { \"text\": \"Die Häufigkeit des GDM ist von folgenden Einflussfaktoren abhängig:\n \tder epidemiologischen Untersuchung verschiedener Bevölkerungsgruppen (z.B. Kaukasierinnen, Asiatinnen, Lateinamerikanerinnen [sog. Hispanierinnen], Pima- Indianerinnen),\nder Untersuchung von Volksgruppen unterschiedlicher genetischer Belastung mit Typ-2- Diabetes und damit unterschiedlichem Prä-Test-Risiko (z.B. Europäer vs. Inder),\nder Untersuchung nur von Risikogruppen (z.B. Adipöse, ältere Schwangere) oder allen Schwangeren einer Population,\ndem Zeitpunkt der Untersuchung (Frühschwangerschaft, 24-28 SSW, nach 32 SSW),\nder Untersuchung mittels vorgeschalteter Screeningverfahren (Uringlukose, Gelegenheitsglukose, Nüchternglukose, 50-g GCT mit unterschiedlichen Screening- Schwellen) oder ohne vorgeschaltetes Screening,\ndem diagnostischen Testverfahren (Menge der Glukose: 50 g [ehemalige DDR, Dänemark], 75 g [Europa], 100 g oGTT [Nordamerika]), der Anzahl der erhobenen Messwerte (1, 2, 3, 4 oder mehr), der Anzahl der erreichten oder überschrittenen Grenzwerte (1 oder 2), der Qualität der Glukosemessung (unzureichender vs. adäquater Laborstandard), der Verwendung des Blutmediums (venöses Plasma vs. kapilläres Vollblut), der präanalytischen Verarbeitung abgenommener Blutproben (Glykolyse unzentrifugierter venöser Vollblut- Blutproben) und der enzymatischen Methode der Blutglukosemessung,\nden von Arbeitsgruppen und Fachgesellschaften durch Expertenmeinung festgelegten diagnostischen Grenzwerten.\" }, { \"text\": \"Nach Literaturangaben der letzten 20 Jahre variierten die Prävalenzen des GDM zwischen 0,6% und 22 % (King 1998 EK IV, Murgia 2006 EK IV), vereinzelt noch niedriger oder auch höher. Je häufiger nach einem GDM bei Schwangeren gesucht wird, je höher die Diabetesrisiken allgemein sind und je niedriger die diagnostischen Grenzen liegen, umso häufiger wird ein GDM diagnostiziert.\" }, { \"text\":\"Im Jahr 2010 wurden in Deutschland rund 650.000 Neugeborene von der Perinatalstatistik beim Institut für angewandte Qualitätsförderung und Forschung im Gesundheitswesen GmbH (AQUA) erfasst. Das AQUA-Institut hat die Bundesgeschäftsstelle für Qualitätssicherung (BQS) ab 1.1.2010 bei der Bundesauswertung Geburtshilfe abgelöst. Die ausgewerteten Daten repräsentieren 99,2% der erwarteten Geburten aus 821 Kliniken. Bei den Müttern lag in 23.872 Fällen (3,7%) ein Gestationsdiabetes vor (AQUA 2011 IIb). Der seit 2002 dokumentierte, ständige Anstieg der Fälle von GDM (2007 bis 2008: +25%) setzt sich nach vorübergehender Stagnation 2009 aktuell fort (Abb.1+2).\" }, { \"grafik\":\"Platzhalter bild\t Relative Häufigkeiten des Gestationsdiabetes in Deutschland 2002-2010\" }, { \"grafik\":\"Platzhalter bild \t Absolute Häufigkeiten des Gestationsdiabetes in Deutschland 2002-2010\" }, { \"text\":\"Zum Zeitpunkt der Geburt ist die GDM-Prävalenz in Deutschland von 2002 bis 2010 relativ um das 2,52-fache angestiegen. Nach den Festlegungen des IADPSG Consensus Panel beträgt die um manifeste Diabetesfälle bereinigte Netto-GDM-Prävalenz im HAPO-Studienkollektiv nach epidemiologischen Maßstäben und methodisch optimierter Blutglukosemessung 16,1% (IADPSG Consensus Panel 2010 EK IV, Nesbitt 2006 EK IIb, Bruns 2009 EK IV).\" }, { \"text\": \"(härtegrad B) Bei der regionalen Versorgung sollte die erhobene GDM-Prävalenz beachtet und der Versorgungsgrad angepasst werden.\" }]}, {\"glossar\":[ {\"begriff\": [ { \"abk\":\"ACE\" }, { \"Vollbegriff\":\"Angiotensin Converting Enzyme\" } ]}, { \"begriff\":[ { \"abk\": \"ACOG\" }, { \"Vollbegriff\":\"American College of Obstetricians and Gynecologists\" } ]} ], \"literatur\":[{ \"quelle\": \"ACOG Practice Bulletin. Clinical management guidelines for obstetrician-gynecologists. Number 30, September 2001 (replaces Technical Bulletin Number 200, December 1994). Gestational diabetes. Obstet Gynecol 2001;98: 525-538.\" }, { \"quelle\":\"Agarwal M, Dhatt G, Punnose J. Gestational diabetes: utility of fasting plasma glucose as a screening test depends on the diagnostic criteria. Diabet Med 2006;23:1319-1326.\" }	],\" kapitel\":[ { \"ueberschrift\":\"12 flussdiagramm: Diagnostik der Hyperglykämie in der Schwangerschaft\" }, { \"grafik\": \"platzhalter\" } ],\" kapitel\":[ { \"ueberschrift\":\"13 Diabetes-Risikotabelle\" }, { \"text\":\"(irgendwie eingerahmt) Alter > 45 Jahre\nBMI > 30 kg/mÂ² präkonzeptionell\n Körperliche Inaktivität\n Eltern oder Geschwister mit Diabetes\n Angehörige einer ethnischen Risikopopulation (z.B. Asiatinnen, Lateinamerikanerinnen)\n Geburt eines Kindes >4500 g\n GDM in der Vorgeschichte\n Arterielle Hypertonie (Blutdruck >140/90 mmHg) oder Einnahme von Medikamenten zur Therapie der arteriellen Hypertonie\n Dyslipidämie präkonzeptionell (HDL <35 mg/ld [0,9 mmol/l] und/oder Triglyceride >250 mg/dl [2,82 mmol/l])\n Polyzystisches Ovarsyndrom\n Prädiabetes (IGT/IFG/HbA1c >5,7%) bei früherem Test (unabhängig von früherem GDM)\n Andere klinische Zustände, die mit Insulinresistenz assoziiert sind (z.B. Acanthosis nigricans)\n Vorgeschichte mit KHK, pAVK, zerebral-arterieller Durchblutungsstörung\n Einnahme kontrainsulinärer Medikation (z.B. Glukokortikoide)\" } ] }] }}";
+    String jsonData ="{ \"leitlinie\": { \"meta\":[{ \"titel\": \"Gestationsdiabetes mellitus (GDM)\" }, { \"awmf\": \"057/008\" }, { \"version\": \"0.1\" }, { \"version-ll-json\": \"0.1\"	}, { \"stand\": \"2011-08\" }, { \"erstellungsdatum\": \"2001\" }, { \"naechsteUeberpruefung\": \"2016-06\" }, { \"klasse\": \"S3\" }, { \"logo\":	\"platzhalter\" }, { \"hinweis\": \"Die Leitlinien der Wissenschaftlichen Medizinischen Fachgesellschaften sind systematisch entwickelte Hilfen für Ärzte zur Entscheidungsfindung in spezifischen Situationen. Sie beruhen auf aktuellen wissenschaftlichen Erkenntnissen und in der Praxis bewährten Verfahren und sorgen für mehr Sicherheit in der Medizin, sollen aber auch ökonomische Aspekte berücksichtigen. Die Leitlinien sind für Ärzte rechtlich nicht bindend und haben daher weder haftungsbegründende noch haftungsbefreiende Wirkung. Die AWMF erfasst und publiziert die Leitlinien der Fachgesellschaften mit größtmöglicher Sorgfalt - dennoch kann die AWMF für die Richtigkeit des Inhalts keine Verantwortung übernehmen. Insbesondere für Dosierungsangaben sind stets die Angaben der Hersteller zu beachten!\" }, { \"copyright\": \"(c)Deutsche DiabetesGesellschaft\" }, { \"untertitel\": \"Evidenzbasierte Leitlinie zu Diagnostik, Therapie u. Nachsorge der Deutschen Diabetes-Gesellschaft (DDG) und der Deutschen Gesellschaft für Gynäkologie und Geburtshilfe (DGGG)\" }, {	\"autor\": [ { \"name\": \"H.Kleinwechter\", \"institut\": \"diabetologikum kiel, Diabetes-Schwerpunktpraxis und Schulungszentrum, Kiel\" }, { \"name\": \"U.Schäfer-Graf\", \"institut\": \"Berliner Diabeteszentrum für Schwangere, Klinik für Gynäkologie und Geburtshilfe, St.Joseph Krankenhaus, Berlin\" }, { \"name\": \"C.Bührer\", \"institut\": \"Klinik für Neonatologie, Charité Universitätsmedizin, Berlin\" }, { \"name\": \"I.Hoesli\", \"institut\": \"Frauenklinik, Geburtshilfe und Schwangerschaftsmedizin, Universitätsspital Basel, Basel/CH\" }, { \"name\": \"F.Kainer\", \"institut\": \"Klinik und Poliklinik für Frauenheilkunde und Geburtshilfe, Perinatalzentrum Klinikum Innenstadt LMU, München\" }, { \"name\": \"A.Kautzky-Willer\", \"institut\": \"Medizinische Universitätsklinik Wien, Klinik für Innere Medizin III, Abteilung für Endokrinologie u. Stoffwechsel, Gender Medicine Unit, Wien/A\" }, { \"name\": \"B.Pawlowski\", \"institut\": \"Klinik für Stoffwechselkrankheiten, Universitätsklinikum Düsseldorf und Deutsches Diabetes-Zentrum, Düsseldorf\" }, { \"name\": \"K.Schnuck\", \"institut\": \"Klinik für Kinder- und Jugendmedizin, Krankenhaus im Friedrichshain, Berlin\" }, { \"name\": \"T.Somville\", \"institut\": \"Klinik für Geburtshilfe und Pränatalmedizin, Universitätsklinikum Hamburg-Eppendorf, Hamburg\" }, { \"name\": \"M.Sorger\", \"institut\": \"Medizinische Poliklinik, Universitätsklinikum Bonn, Bonn\" } ]}, { \"weitereInfos\": [ { \"text\":\"Erstveröffentlichung 08/2011\" }, { \"text\":\"Geplante Überarbeitung 08/2016\" }, { \"text\":\"Korrespondenzadressen für die Deutsche Diabetes-Gesellschaft\n Dr.med. Helmut Kleinwechter, Sprecher der Expertengruppe &quot;Diabetes und Schwangerschaft&quot; der DDG diabetologikum kiel, Diabetes-Schwerpunktpraxis und Schulungszentrum, Alter Markt 11 u. 14, 24103 Kiel\n Tel.: 0431/95807, Fax: 0431/95805, E-mail: arzt@diabetologikum-kiel.de\" }, { \"text\":\"Prof. Dr.med. Monika Kellerer, Leitlinienbeauftragte des Vorstands der DDG\n Zentrum für Innere Medizin I, Marienhospital Stuttgart, Boheimstr.37, 70199 Stuttgart\nTel.: 0711/64892102, Fax: 0711/64892119, E-Mail: monikakellerer@vinzenz.de\" }, { \"text\":\"Korrespondenzadresse für die Deutsche Gesellschaft für Gynäkologie u. Geburtshilfe\nPD Dr.med. Ute Schäfer-Graf, Sprecherin der Expertengruppe Diabetes und Schwangerschaft der DGGG\nBerliner Diabeteszentrum für Schwangere, Klinik für Gynäkologie und Geburtshilfe, St.Joseph Krankenhaus, Wüsthoffstraße 15, 12101 Berlin\nTel.: 030/7882-4214/2236, Fax: 030/7882-2766, E-mail: ute.schaefer-graf@sjk.de\" } ]}], \"inhalt\":[ { \"vorbemerkung\":[ { \"text\":\"Diese interdisziplinäre, evidenzbasierte S3-Leitlinie (AWMF-Leitlinie 057/008) ist fachgesellschaftsübergreifend und bearbeitet nur den Gestationsdiabetes mellitus (GDM, ICD-10: O24.4G), aber nicht den präkonzeptionell bekannten Diabetes mellitus (Typ-1, Typ-2, spezifische Formen). Die Leitlinie ersetzt die Empfehlungen zur Diagnostik und Therapie des Gestationsdiabetes aus dem Jahr 2001 (AG Diabetes und Schwangerschaft der DDG 2001 EK IV). Diese Leitlinie wird durch eine Kurzfassung als Praxisleitlinie der DDG/DGGG und eine Laienversion für Schwangere und Interessierte ergänzt.\" }, { \"text\":\"Für zusätzliche Informationen zum Thema Diabetes und Schwangerschaft wird auf folgende Leitlinien und Empfehlungen hingewiesen\" }, { \"text\":\"\tEvidenzbasierte Leitlinie Diabetes und Schwangerschaft\nAWMF-Leitlinie 057/023\nhttp://www.deutsche-diabetesgesellschaft.de/fileadmin/Redakteur/Leitlinien/Evidenzbasierte_Leitlinien/EBL_Schwangerschaft_2008.pdf\" }, { \"text\":\"\tPraxisleitlinie Diabetes und Schwangerschaft\nttp://www.deutsche-diabetesgesellschaft.de/fileadmin/Redakteur/Leitlinien/Praxisleitlinien/PL_DDG2011_Diab_und_Schwangerschaft.pdf\" }]}, {\"kapitel 1\":[ { \"ueberschrift\":\"1 Gesundheitsziele\" }, { \"text\":\"Die International Diabetes Federation (IDF) und die WHO-Europa haben 1989 und 1999 Gesundheitsziele für Schwangerschaften bei Frauen mit Diabetes formuliert (WHO u. IDF Europe 1990 EK IV, WHO Europa 1999 EK IV). Danach sollen Verlauf und Ergebnisse von Schwangerschaften bei Frauen mit Diabetes von 1999 bis zum Jahr 2020 um ein Drittel verbessert werden. Die IDF legte 2009 erstmals eine um den Gestationsdiabetes erweiterte globale Leitlinie zu den Problemen von Diabetes und Schwangerschaft vor (IDF 2009 EK IV). Die IDF stellt fest, dass der GDM mit Komplikationen in der Schwangerschaft assoziiert ist, die durch rechtzeitige Diagnostik und intensive Behandlung abgemildert werden können. Dies bestätigt auch eine systematische Übersicht und Metaanalyse: Therapeutisch effektiv sind sowohl eine Blutglukosesenkende als auch eine spezialisierte geburtsmedizinische Betreuung (Horvath 2010 EK Ia).\" }, { \"text\":\"(härtegrad B) Die Vorgaben der Gesundheitsziele sollten anhand von Qualitätsindikatoren überprüft werden (siehe Seite 64-65, 9 Qualitätssicherung)\" }]}, {\"kapitel 2\":[ {\"ueberschrift\":\"2 Definition\" }, { \"text\": \"Gestationsdiabetes mellitus (GDM, ICD-10: O24.4G) ist definiert\" }, { \"text\": \"als eine Glukosetoleranzstörung, die erstmals in der Schwangerschaft mit einem 75-g oralen Glukosetoleranztest (oGTT) unter standardisierten Bedingungen und qualitätsgesicherter Glukosemessung aus venösem Plasma diagnostiziert wird. Die Diagnose ist bereits mit einem erhöhten Glukosewert möglich.\" }, { \"text\": \"Die diagnostischen Grenzwerte beruhen auf internationaler Konsensbildung durch Experten (IADPSG Consensus Panel 2010 EK IV). Der Experten-Konsensbildung wurden die Ergebnisse einer epidemiologischen Untersuchung mit mütterlichen und neonatalen, klinisch relevanten Endpunkten zugrunde gelegt (HAPO Cooperative Research Group 2008 EK IIb, 2009 EK IIb, 2010 IIb). Alle in der Leitlinie beschriebenen Blutglukosewerte beziehen sich auf Blutplasma.\" }, { \"text\":  \"Die Übergänge zwischen sog. normaler Glukosetoleranz in der Schwangerschaft und Gestationsdiabetes sind fließend, ein Schwellenwert existiert nicht. Nach internationalem Konsens werden ein bisher unbekannter, manifester Diabetes und eine Hyperglykämie unterschieden, die unterhalb dieser Grenzen liegt und als Gestationsdiabetes, wie oben beschrieben, klassifiziert wird (IADPSG Consensus Panel 2010 EK IV, American Diabetes Association 2011 EK IV). Die Definition des manifesten Diabetes entspricht der außerhalb einer Schwangerschaft. Damit fallen ein manifester Typ-1- oder Typ-2-Diabetes mellitus oder spezifische Diabetesformen, die erstmals während der Schwangerschaft diagnostiziert werden, nicht mehr unter die Diagnoseklasse des Gestationsdiabetes.\" }, { \"text\": \"(härtegrad A) Das in dieser Leitlinie empfohlene Vorgehen nach IADPSG Consensus Panel soll einheitlich angewendet werden\" }, {\"kapitel 2.1\"	:[ { \"ueberschrift\":\"2.1 Pathopsychologie\" }, { \"text\": \"Die Pathophysiologie des Gestationsdiabetes entspricht zu einem großen Teil der des Typ-2- Diabetes. Auf der Basis einer genetischen Prädisposition spielen vor allem Übergewicht und der Lebensstil (Ernährung, Bewegung) der Frauen eine große Rolle. Die in der zweiten Schwangerschaftshälfte physiologisch einsetzende Insulinresistenz führt im Falle eines Gestationsdiabetes bei gleichzeitig vorliegendem (zumindest relativem) Insulinsekretionsdefekt zur Hyperglykämie in der Gravidität. Neben den hormonellen Veränderungen in der Gravidität dürften auch eine veränderte Freisetzung von Adipokinen und Zytokinen aus dem Fettgewebe und der Plazenta eine Rolle spielen.\"}, { \"text\": \"Die zugrundeliegenden pathophysiologischen Mechanismen sind in Analogie zum heterogenen Erscheinungsbild des GDM unterschiedlich und bislang â€“ wie bei Diabetes im Allgemeinen - nicht vollständig geklärt (Metzger 2007 EK IV). Kausal dürfte beim klassischen Bild des GDM eine chronische, d.h. bereits präkonzeptionell bestehende, Herabsetzung der Insulinsensitivität bestehen, die zusätzlich durch die ab der 20. Schwangerschaftswoche zunehmende physiologische Insulinresistenz verstärkt wird und durch die endogene Insulinsekretion nur unzureichend kompensiert werden kann (=relativer Insulinmangel [Kautzky 1997 EK IIa]). Für die Insulinresistenz ebenso wie für die Insulinsekretionsstörung liegt teilweise eine genetische Prädisposition vor, wobei aber die Ausprägung durch Umweltfaktoren, den Lebensstil (hochkalorische Ernährung fast food und Bewegungsmangel), insbesondere Übergewicht, wesentlich beeinflusst wird. Frauen, die einen Gestationsdiabetes entwickeln, weisen meist die gleichen Risikofaktoren wie Frauen mit einem Typ-2-Diabetes auf. Ebenso wurden eine ungünstige Veränderung im Sekretionsmuster von Adipokinen, insbesondere eine Verminderung von Adiponektin und eine Zunahme von Leptin, sowie ein Anstieg von TNF , beim GDM beschrieben (Kautzky 2004 EK III, Catalano 2008 EK III). Genomweite Assoziationsstudien weisen beim GDM auf die gleichen Kandidatgene wie für den Typ-2-Diabetes hin (Watanabe 2007 EK III).\" }, { \"text\": \"Aufgrund dieser typischen metabolischen Veränderungen und dem Vorliegen von Übergewicht bei der Großzahl der betroffenen Schwangeren wird der klassische GDM als eine Form des Prä-Typ-2- Diabetes angesehen, welcher durch eine erhebliche Insulinresistenz und eine gestörte Beta- Zellfunktion (Frühphasen-Sekretionsdefekt) charakterisiert ist (Kim 2002 EK III, Kautzky 2005 EK IIb). GDM kann daher meistens als eine chronische Funktionsstörung beschrieben werden, gekennzeichnet durch eine Insulinresistenz mit abfallender ß-Zell-Kompensation, die nur durch ein Glukosescreening als Routine-Maßnahme in der Schwangerschaft entdeckt wird (Xiang 2010 EK IIa).\" } ]}]}, {\"kapitel 3\"	:[ { \"ueberschrift\": \"3 Epidemologie\" }, { \"text\": \"Die Häufigkeit des GDM ist von folgenden Einflussfaktoren abhängig:\n \tder epidemiologischen Untersuchung verschiedener Bevölkerungsgruppen (z.B. Kaukasierinnen, Asiatinnen, Lateinamerikanerinnen [sog. Hispanierinnen], Pima- Indianerinnen),\nder Untersuchung von Volksgruppen unterschiedlicher genetischer Belastung mit Typ-2- Diabetes und damit unterschiedlichem Prä-Test-Risiko (z.B. Europäer vs. Inder),\nder Untersuchung nur von Risikogruppen (z.B. Adipöse, ältere Schwangere) oder allen Schwangeren einer Population,\ndem Zeitpunkt der Untersuchung (Frühschwangerschaft, 24-28 SSW, nach 32 SSW),\nder Untersuchung mittels vorgeschalteter Screeningverfahren (Uringlukose, Gelegenheitsglukose, Nüchternglukose, 50-g GCT mit unterschiedlichen Screening- Schwellen) oder ohne vorgeschaltetes Screening,\ndem diagnostischen Testverfahren (Menge der Glukose: 50 g [ehemalige DDR, Dänemark], 75 g [Europa], 100 g oGTT [Nordamerika]), der Anzahl der erhobenen Messwerte (1, 2, 3, 4 oder mehr), der Anzahl der erreichten oder überschrittenen Grenzwerte (1 oder 2), der Qualität der Glukosemessung (unzureichender vs. adäquater Laborstandard), der Verwendung des Blutmediums (venöses Plasma vs. kapilläres Vollblut), der präanalytischen Verarbeitung abgenommener Blutproben (Glykolyse unzentrifugierter venöser Vollblut- Blutproben) und der enzymatischen Methode der Blutglukosemessung,\nden von Arbeitsgruppen und Fachgesellschaften durch Expertenmeinung festgelegten diagnostischen Grenzwerten.\" }, { \"text\": \"Nach Literaturangaben der letzten 20 Jahre variierten die Prävalenzen des GDM zwischen 0,6% und 22 % (King 1998 EK IV, Murgia 2006 EK IV), vereinzelt noch niedriger oder auch höher. Je häufiger nach einem GDM bei Schwangeren gesucht wird, je höher die Diabetesrisiken allgemein sind und je niedriger die diagnostischen Grenzen liegen, umso häufiger wird ein GDM diagnostiziert.\" }, { \"text\":\"Im Jahr 2010 wurden in Deutschland rund 650.000 Neugeborene von der Perinatalstatistik beim Institut für angewandte Qualitätsförderung und Forschung im Gesundheitswesen GmbH (AQUA) erfasst. Das AQUA-Institut hat die Bundesgeschäftsstelle für Qualitätssicherung (BQS) ab 1.1.2010 bei der Bundesauswertung Geburtshilfe abgelöst. Die ausgewerteten Daten repräsentieren 99,2% der erwarteten Geburten aus 821 Kliniken. Bei den Müttern lag in 23.872 Fällen (3,7%) ein Gestationsdiabetes vor (AQUA 2011 IIb). Der seit 2002 dokumentierte, ständige Anstieg der Fälle von GDM (2007 bis 2008: +25%) setzt sich nach vorübergehender Stagnation 2009 aktuell fort (Abb.1+2).\" }, { \"grafik\":\"http://www.diabetologie-online.de/_storage/asset/1578989/storage/kirchheim:article-2_04-1/file/110008940/04680630.jpg file:///C:/Users/Thot/Pictures/Bild1.png\t Abbildung Relative Häufigkeiten des Gestationsdiabetes in Deutschland 2002-2010\" }, { \"grafik\":\"http://www.diabetologie-online.de/_storage/asset/1578989/storage/kirchheim:article-2_04-1/file/110008940/04680630.jpg file:///C:/Users/Thot/Pictures/Bild1.png \t Abbildung Absolute Häufigkeiten des Gestationsdiabetes in Deutschland 2002-2010\" }, { \"text\":\"Zum Zeitpunkt der Geburt ist die GDM-Prävalenz in Deutschland von 2002 bis 2010 relativ um das 2,52-fache angestiegen. Nach den Festlegungen des IADPSG Consensus Panel beträgt die um manifeste Diabetesfälle bereinigte Netto-GDM-Prävalenz im HAPO-Studienkollektiv nach epidemiologischen Maßstäben und methodisch optimierter Blutglukosemessung 16,1% (IADPSG Consensus Panel 2010 EK IV, Nesbitt 2006 EK IIb, Bruns 2009 EK IV).\" }, { \"text\": \"(härtegrad B) Bei der regionalen Versorgung sollte die erhobene GDM-Prävalenz beachtet und der Versorgungsgrad angepasst werden.\" }]}, {\"glossar\":[ {\"begriff\": [ { \"abk\":\"ACE\" }, { \"Vollbegriff\":\"Angiotensin Converting Enzyme\" } ]}, { \"begriff\":[ { \"abk\": \"ACOG\" }, { \"Vollbegriff\":\"American College of Obstetricians and Gynecologists\" } ]} ], \"literatur\":[{ \"quelle\": \"ACOG Practice Bulletin. Clinical management guidelines for obstetrician-gynecologists. Number 30, September 2001 (replaces Technical Bulletin Number 200, December 1994). Gestational diabetes. Obstet Gynecol 2001;98: 525-538.\" }, { \"quelle\":\"Agarwal M, Dhatt G, Punnose J. Gestational diabetes: utility of fasting plasma glucose as a screening test depends on the diagnostic criteria. Diabet Med 2006;23:1319-1326.\" }	],\" kapitel\":[ { \"ueberschrift\":\"12 flussdiagramm: Diagnostik der Hyperglykämie in der Schwangerschaft\" }, { \"grafik\": \"platzhalter\" } ],\" kapitel\":[ { \"ueberschrift\":\"13 Diabetes-Risikotabelle\" }, { \"text\":\"(irgendwie eingerahmt) Alter > 45 Jahre\nBMI > 30 kg/mÂ² präkonzeptionell\n Körperliche Inaktivität\n Eltern oder Geschwister mit Diabetes\n Angehörige einer ethnischen Risikopopulation (z.B. Asiatinnen, Lateinamerikanerinnen)\n Geburt eines Kindes >4500 g\n GDM in der Vorgeschichte\n Arterielle Hypertonie (Blutdruck >140/90 mmHg) oder Einnahme von Medikamenten zur Therapie der arteriellen Hypertonie\n Dyslipidämie präkonzeptionell (HDL <35 mg/ld [0,9 mmol/l] und/oder Triglyceride >250 mg/dl [2,82 mmol/l])\n Polyzystisches Ovarsyndrom\n Prädiabetes (IGT/IFG/HbA1c >5,7%) bei früherem Test (unabhängig von früherem GDM)\n Andere klinische Zustände, die mit Insulinresistenz assoziiert sind (z.B. Acanthosis nigricans)\n Vorgeschichte mit KHK, pAVK, zerebral-arterieller Durchblutungsstörung\n Einnahme kontrainsulinärer Medikation (z.B. Glukokortikoide)\" } ] }] }}";
     /* * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
@@ -110,7 +111,7 @@ public class LeitlinieMain extends AppCompatActivity {
 
                     try {
 
-                        // jsonData = response.body().string();
+                        jsonData = response.body().string();
                         if (response.isSuccessful()) {
                             mLeitlinie = parseLeitlinieData(jsonData);
                         } else {
@@ -139,6 +140,7 @@ public class LeitlinieMain extends AppCompatActivity {
 
         // makejsonobjreq();
 
+        final LayoutInflater inflater = LayoutInflater.from(this);
 
         mToolsButton = (Button) findViewById(R.id.ToolsButton);
 
@@ -149,10 +151,11 @@ public class LeitlinieMain extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        mHomebutton = (Button) findViewById(R.id.Button01);
         listView = (ListView) findViewById(R.id.listView1);
         list = new ArrayList<NLevelItem>();
         Random rng = new Random();
-        final LayoutInflater inflater = LayoutInflater.from(this);
+        //final LayoutInflater inflater = LayoutInflater.from(this);
         NLevelItem kapitelName = null;
         NLevelItem ersteEbene = null;
         NLevelItem zweiteEbene = null;
@@ -163,19 +166,19 @@ public class LeitlinieMain extends AppCompatActivity {
             JSONObject jsonRootObject = new JSONObject(jsonData);
             JSONObject jsonLeitlinieObject = jsonRootObject.getJSONObject("leitlinie");
             JSONArray jsonArrayInhalt = jsonLeitlinieObject.getJSONArray("inhalt");
+
             //JSONObject meta = jsonLeitlinieObject.getJSONObject("meta");
             // JSONObject jsonObjectInhalt = jsonLeitlinieObject.getJSONObject("titel");
             String titel = jsonArrayInhalt.getString(1);
             // leitlinienJsonObject = jsonObject.optJSONObject("leitlinie");
-            for (int i = 0; i < jsonArrayInhalt.length(); i++) {
+            for (int i = 0; i < jsonArrayInhalt.length()-1; i++) {
                 JSONObject jsonObjectKapitelName = null;
+
                 JSONObject jsonObject = jsonArrayInhalt.getJSONObject(i);
                 JSONArray key = jsonObject.names();
-                Log.i("Kapitel 1", key.toString());
-                int subStringStart = jsonArrayInhalt.getString(i).indexOf("[\"");
-                int subStringEnd = jsonArrayInhalt.getString(i).indexOf("\"]");
-                if(jsonArrayInhalt.getJSONObject(i).names().toString()=="ueberschrift") {
-                    kapitelName = new NLevelItem(new SomeObject(jsonArrayInhalt.getJSONObject(i).getString(jsonArrayInhalt.getJSONObject(i).names().toString())), null, new NLevelView() {
+                Log.i("Kapitel 1", key.toString());;
+                if(jsonArrayInhalt.getJSONObject(i).keys().next()=="ueberschrift") {
+                    kapitelName = new NLevelItem(new SomeObject(jsonArrayInhalt.getJSONObject(i).getString(jsonArrayInhalt.getJSONObject(i).getString("ueberschrift"))), null, new NLevelView() {
 
                         @Override
                         public View getView(NLevelItem item) {
@@ -188,9 +191,8 @@ public class LeitlinieMain extends AppCompatActivity {
                         }
                     });
                 }
-
-                else{
-                    kapitelName = new NLevelItem(new SomeObject(key.toString()), null, new NLevelView() {
+                else if(jsonArrayInhalt.getJSONObject(i).keys().next()=="glossar"){}else{
+                    kapitelName = new NLevelItem(new SomeObject(jsonArrayInhalt.getJSONObject(i).keys().next()), null, new NLevelView() {
 
                         @Override
                         public View getView(NLevelItem item) {
@@ -206,6 +208,7 @@ public class LeitlinieMain extends AppCompatActivity {
 
 
                 list.add(kapitelName);
+
                 int laenge = 0;
 
                 for (int j = 0; j < jsonArrayInhalt.getJSONObject(i).names().length(); j++) {
@@ -216,7 +219,10 @@ public class LeitlinieMain extends AppCompatActivity {
                         keys.next();
                     }
                     JSONObject jsonObject1 = jsonArrayInhalt.getJSONObject(i);
-                    Log.i("hallo3", jsonObject1.names().toString());
+                 /*   if(jsonObject1.getString(keys.next()).contains("{\"kapitel")){
+                        Log.i("hallo3", jsonObject1.toString);
+                    }*/
+
                     Log.d("jsonObject", jsonObject1.toString());
                     Log.wtf("laenge", Integer.toString(laenge));
 
@@ -226,29 +232,32 @@ public class LeitlinieMain extends AppCompatActivity {
                     ;
                     JSONArray jsonArray1 = jsonObject.getJSONArray(jsonObject1.names().getString(j));
 
-                    for (int m = 0; m < jsonObject1.getJSONArray(jsonObject3.getString(j)).length(); m++) {
+                    for (int m = 0; m < jsonArray1.length(); m++) {
                         int n = 0;
                         Log.d("names", jsonObject3.getString(j));
 
-                        Log.e("msg", jsonObject1.toString());
+                       //Log.e("msg", jsonArray1.getJSONObject(m).names().getString(j));
+                        //if(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).keys().next().contains("kapitel")){
+
                         Log.e("g", jsonObject1.getJSONArray(jsonObject3.getString(j)).toString());
-                        if (jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).has("text")) {
+                        if (jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).keys().next().equals("text")) {
                             Log.e("m", jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).getString("text"));
-                            if(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).getString("text").contains("(haertegrad")){
-                                ersteEbene = new NLevelItem(new SomeObject(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).getString("text").substring(1,11)), kapitelName, new NLevelView() {
+                            if(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).getString("text").contains("(härtegrad")) {
+                                ersteEbene = new NLevelItem(new SomeObject(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).getString("text").substring(1, 12)), kapitelName, new NLevelView() {
 
                                     @Override
                                     public View getView(NLevelItem item) {
                                         View view = inflater.inflate(R.layout.expandable_list_textitem, null);
                                         TextView tv = (TextView) view.findViewById(R.id.textView);
                                         tv.setBackgroundColor(Color.RED);
-                                        tv.setTextColor(Color.rgb(23,38,0));
+                                        tv.setTextColor(Color.rgb(23, 38, 0));
                                         String name = (String) ((SomeObject) item.getWrappedObject()).getName();
                                         tv.setText(name);
                                         return view;
                                     }
                                 });
-                            } else{
+                            }
+                            else{
                             ersteEbene = new NLevelItem(new SomeObject(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).getString("text").substring(0,20)), kapitelName, new NLevelView() {
 
                                 @Override
@@ -262,25 +271,72 @@ public class LeitlinieMain extends AppCompatActivity {
                                     return view;
                                 }
                             });
-                        } }
-                        else {
-                            ersteEbene = new NLevelItem(new SomeObject(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).getString(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).names().optString(n))), kapitelName, new NLevelView() {
+                        } }else if(jsonArray1.getJSONObject(m).keys().next()!="text"&&jsonArray1.getJSONObject(m).keys().next()!="grafik") {
+                                if (jsonArray1.getJSONObject(m).get(jsonArray1.getJSONObject(m).keys().next()) instanceof JSONArray) {
+                                    JSONArray jsonArraySub1 = jsonArray1.getJSONObject(m).getJSONArray(jsonArray1.getJSONObject(m).keys().next());
+                                    for(int sub1 = 0; sub1<jsonArraySub1.length();sub1++){
+                                        Log.i("laengneenne", jsonArraySub1.toString());
+                                        Log.d("überschrift", jsonArraySub1.getJSONObject(sub1).keys().next());
+                                        if(jsonArraySub1.getJSONObject(sub1).keys().next().equals("ueberschrift")) {
+                                            Log.e("fits", "läuft");
+                                            ersteEbene = new NLevelItem(new SomeObject(jsonArraySub1.getJSONObject(sub1).getString(jsonArraySub1.getJSONObject(sub1).keys().next())), kapitelName, new NLevelView() {
 
-                                @Override
-                                public View getView(NLevelItem item) {
-                                    View view = inflater.inflate(R.layout.expandable_list_textitem, null);
-                                    TextView tv = (TextView) view.findViewById(R.id.textView);
-                                    tv.setBackgroundColor(Color.YELLOW);
-                                    String name = (String) ((SomeObject) item.getWrappedObject()).getName();
-                                    tv.setText(name);
-                                    return view;
+                                                @Override
+                                                public View getView(NLevelItem item) {
+                                                    View view = inflater.inflate(R.layout.expandable_list_textitem, null);
+                                                    TextView tv = (TextView) view.findViewById(R.id.textView);
+                                                    tv.setBackgroundColor(Color.GREEN);
+                                                    String name = (String) ((SomeObject) item.getWrappedObject()).getName();
+                                                    tv.setText(name);
+                                                    return view;
+                                                }
+                                            });
+                                            if(list.contains(ersteEbene)){
+                                                if(list.contains(zweiteEbene)){
+
+                                                }else{
+                                                    Log.i("test", "testitiest");
+                                                    list.add(zweiteEbene);}
+                                            }else {
+                                                list.add(ersteEbene);
+                                            }}
+                                        else{
+                                            Log.d("subchap",jsonArraySub1.getJSONObject(sub1).getString
+                                                    (jsonArraySub1.getJSONObject(sub1).keys().next()));
+                                            zweiteEbene = new NLevelItem(new SomeObject(jsonArraySub1.getJSONObject(sub1).getString
+                                                    (jsonArraySub1.getJSONObject(sub1).keys().next())), ersteEbene, new NLevelView() {
+
+                                                @Override
+                                                public View getView(NLevelItem item) {
+                                                    View view = inflater.inflate(R.layout.expandable_list_textitem, null);
+                                                    TextView tv = (TextView) view.findViewById(R.id.textView);
+                                                    tv.setBackgroundColor(Color.WHITE);
+                                                    tv.setTextColor(Color.BLACK);
+                                                    String name = (String) ((SomeObject) item.getWrappedObject()).getName();
+                                                    tv.setText(name);
+                                                    return view;
+                                                }
+                                            });
+                                            if(list.contains(zweiteEbene)){
+
+                                            }else {
+                                                list.add(zweiteEbene);
+                                            }
+                                        }
+                                    }
                                 }
-                            });
+                            }else if(jsonArray1.getJSONObject(m).keys().next()=="grafik") {
                         }
 
-                        n++;
-                        list.add(ersteEbene);
+                        if(list.contains(ersteEbene)){
+                            if(list.contains(zweiteEbene)){
 
+                            }else{
+                                Log.i("test", "testitiest");
+                            list.add(zweiteEbene);}
+                        }else {
+                            list.add(ersteEbene);
+                        }
 
                         for (int k = 0; k < jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(k).names().length(); k++) {
                             if (jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).has("text")) {
@@ -298,7 +354,7 @@ public class LeitlinieMain extends AppCompatActivity {
                                     }
                                 });
                             }
-                            else if(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).has("grafik")){
+                            else if(jsonObject1.getJSONArray(jsonObject3.getString(j)).getJSONObject(m).keys().next().equals("grafik")){
                                 ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
                                         .threadPriority(Thread.NORM_PRIORITY - 2)
                                         .denyCacheImageMultipleSizesInMemory()
@@ -313,43 +369,58 @@ public class LeitlinieMain extends AppCompatActivity {
                                     @Override
                                     public View getView(NLevelItem item) {
                                         View view = inflater.inflate(R.layout.expandable_list_textitem, null);
-                                      //  TextView tv = (TextView) view.findViewById(R.id.textView);
+                                        TextView tv = (TextView) view.findViewById(R.id.textView);
                                         ImageView iv = (ImageView) view.findViewById(R.id.imageView);
 
-                                      //  tv.setBackgroundColor(Color.BLACK);
-                                       // tv.setTextColor(Color.WHITE);
+                                        tv.setBackgroundColor(Color.YELLOW);
+                                        tv.setTextColor(Color.BLACK);
                                         String uri = (String) ((SomeObject) item.getWrappedObject()).getName();
-                                       // tv.setText(name);
+                                      //  tv.setText(uri.substring(uri.indexOf("Abbildung")));
+                                        int urlendplus3 = uri.indexOf("file://");
                                         URL url = null;
-                                        try {
-                                            if(uri.subSequence(0,3)=="http" && isNetworkAvailable()){
-                                            int urlendplus3 = uri.indexOf("file:///");
-                                            url = new URL(uri.substring(0,urlendplus3-2));}
-                                            else{
-                                                uri=uri.substring(uri.indexOf("file:///"));
-                                            }
+                                        /*try {
+                                            //url = new URL(uri.substring(0,(urlendplus3-2)));
                                         } catch (MalformedURLException e) {
+                                            e.printStackTrace();
+                                        }*/
+
+
+                                        //Log.i("bild", uri.substring(0, urlendplus3-1));
+                                        /*try {
+                                            if(uri.subSequence(0,3)=="http" && isNetworkAvailable()) {
+                                                Log.i("bild", "bild");
+                                            }
+                                            else{
+                                                uri=uri.substring(uri.indexOf("file://"), uri.indexOf("Abbildung")-2);
+                                                Log.i("URI",uri);
+                                            }
+                                        } catch (Exception e) {
                                             e.printStackTrace();
                                         }
                                         Bitmap bmp = null;
                                         try {
-                                            bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());
+                                            if(isNetworkAvailable()){
+                                            bmp = BitmapFactory.decodeStream(url.openConnection().getInputStream());}
                                         } catch (IOException e) {
                                             e.printStackTrace();
-                                        }
-                                        iv.setImageBitmap(bmp);
-                                        imageLoader.displayImage(uri, iv);
-                                        //imageLoader.displayImage(url.toString(), iv);
+                                        }*/
+                                        //iv.setImageBitmap(bmp);
+                                        imageLoader.displayImage("drawable://" + R.drawable.image, iv);
+                                        imageLoader.displayImage(uri.substring(0,(uri.indexOf(" file"))), iv);
                                         iv.setImageDrawable(iv.getDrawable());
-                                        //view.setBackground(iv.getDrawable());
+                                        view.setBackground(iv.getDrawable());
                                         return view;
-                                    }
-                                });
+                                }
 
-                            }
+                            });
 
-                                list.add(zweiteEbene);
+
                         }
+                            if(list.contains(zweiteEbene)){
+
+                            }else {
+                                list.add(zweiteEbene);
+                            }}
                     }
                 }
             }
@@ -583,15 +654,40 @@ public class LeitlinieMain extends AppCompatActivity {
         client2.disconnect();
     }
     public boolean hasAnotherArray(JSONObject jsonObject) throws JSONException {
+        if(jsonObject.has("ueberschrift")){
         if (jsonObject.get("ueberschrift") instanceof JSONObject) {
                 return false;
-            } else if(jsonObject.get("ueberschrift") instanceof JSONArray){
+            } else {
                 JSONArray kapitelArray = jsonObject.getJSONArray(jsonObject.getString("ueberschrift"));
                 return true;
-            }
+            }}
         else{
             return false;
         }
+
+
+
+    }
+    public NLevelItem nextLevelItem(JSONArray kapitelArray, int i) throws JSONException {
+        final LayoutInflater inflater = LayoutInflater.from(this);
+
+        NLevelItem kapitelName = new NLevelItem(new SomeObject(kapitelArray.getJSONObject(i).getString(kapitelArray.getJSONObject(i).names().toString())), null, new NLevelView() {
+
+                @Override
+                public View getView(NLevelItem item) {
+                    View view = inflater.inflate(R.layout.expandable_list_textitem, null);
+                    TextView tv = (TextView) view.findViewById(R.id.textView);
+                    tv.setBackgroundColor(Color.GREEN);
+                    String name = (String) ((SomeObject) item.getWrappedObject()).getName();
+                    tv.setText(name);
+                    return view;
+                }
+            });
+        Log.e("works", kapitelName.toString());
+        if(hasAnotherArray(kapitelArray.getJSONObject(i))){
+            list.add(nextLevelItem(kapitelArray.getJSONObject(i).getJSONArray(kapitelName.toString()), i));
+        }
+        return kapitelName;
     }
 
 

@@ -104,4 +104,39 @@
         android:layout_alignRight="@+id/auswButton"
         android:layout_alignEnd="@+id/auswButton"
         android:background="@android:color/darker_gray"/>
+        
+            <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#595959"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true">
+        <Button android:text="Home"
+            android:id="@+id/Button01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="-3dip">
+        </Button>
+        <Button android:text="Last"
+            android:id="@+id/LastButton"
+            android:layout_toRightOf="@+id/Button01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="-3dip"
+            android:layout_marginRight="-3dip">
+        </Button>
+        <Button android:text="Tools"
+            android:id="@+id/ToolsButton"
+            android:layout_toRightOf="@+id/Button01"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="-3dip"
+            >
+        </Button>
+    </LinearLayout>
 </RelativeLayout>

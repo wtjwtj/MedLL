@@ -18,6 +18,7 @@ public class Risikoanalyse extends AppCompatActivity {
     private Button ausBut;
     private EditText bmiText, alttext, gewText;
     private TextView risikoergText;
+    private Button buttonH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +36,16 @@ public class Risikoanalyse extends AppCompatActivity {
         alttext = (EditText) findViewById(R.id.altereditText);
         gewText = (EditText) findViewById(R.id.gebeditText);
 
-
         risikoergText = (TextView) findViewById(R.id.ergTextView);
+        
+        buttonH = (Button)findViewById(R.id.Button01);
+        buttonH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentH = new Intent(Risikoanalyse.this, LeitlinieMain.class);
+                startActivity(intentH);
+            }
+        });
         ausBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -18,6 +18,7 @@ public class einheitenRechner extends AppCompatActivity {
     private Spinner spinner1;
     private TextView erg;
     private EditText rech;
+    private Button buttonH;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,15 @@ public class einheitenRechner extends AppCompatActivity {
 
         rech = (EditText) findViewById(R.id.rechn);
         erg = (TextView) findViewById(R.id.erg);
+        
+        buttonH = (Button)findViewById(R.id.Button01);
+        buttonH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentH = new Intent(Risikoanalyse.this, LeitlinieMain.class);
+                startActivity(intentH);
+            }
+        });
 
         Button button = (Button) findViewById(R.id.button);
 //berechnen button enablen

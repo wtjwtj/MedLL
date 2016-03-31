@@ -38,7 +38,7 @@ public class ToolsActivity extends AppCompatActivity {
         buttonH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentH = new Intent(Risikoanalyse.this, LeitlinieMain.class);
+                Intent intentH = new Intent(ToolsActivity.this, LeitlinieMain.class);
                 startActivity(intentH);
             }
         });

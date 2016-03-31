@@ -43,6 +43,11 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+            
+            <activity android:name=".einheitenRechner">
+        </activity>
+        <activity android:name=".Risikoanalyse">
+        </activity>
     </application>
 
 </manifest>

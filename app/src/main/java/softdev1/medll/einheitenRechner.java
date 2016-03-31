@@ -34,7 +34,7 @@ public class einheitenRechner extends AppCompatActivity {
         buttonH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentH = new Intent(Risikoanalyse.this, LeitlinieMain.class);
+                Intent intentH = new Intent(einheitenRechner.this, LeitlinieMain.class);
                 startActivity(intentH);
             }
         });

@@ -20,6 +20,7 @@ public class ToolsActivity extends AppCompatActivity {
     GridView gridView;
     private double bmiErg;
     private Button mToolsButton1;
+    private Button buttonH;
 
     static final String[]tools = new String[]{
             "BMI-Rechner","Einheiten-Rechner","Risikoanalyse", "Stopuhr",
@@ -32,6 +33,15 @@ public class ToolsActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        
+        buttonH = (Button)findViewById(R.id.Button01);
+        buttonH.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentH = new Intent(Risikoanalyse.this, LeitlinieMain.class);
+                startActivity(intentH);
+            }
+        });
 
 
         gridView = (GridView) findViewById(R.id.toolsGrid);

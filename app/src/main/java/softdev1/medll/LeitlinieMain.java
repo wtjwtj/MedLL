@@ -71,6 +71,7 @@ import java.util.Set;
 public class LeitlinieMain extends AppCompatActivity {
     private Button mToolsButton;
     private Button mHomebutton;
+    private String pUrl;
     public static final String TAG = LeitlinieMain.class.getSimpleName();
     private Leitlinie mLeitlinie;
     // ExpandableListAdapter listAdapter;
@@ -637,7 +638,30 @@ String jsonData = "{ \"leitlinie\": { \"meta\":[{ \"titel\": \"Gestationsdiabete
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("URL of the file");
+
+// Set up the input
+            final EditText input = new EditText(this);
+// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
+            input.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+            builder.setView(input);
+
+// Set up the buttons
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    pUrl = input.getText().toString();
+                }
+            });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.cancel();
+                }
+            });
+            builder.show();
+
         }
 
         return super.onOptionsItemSelected(item);
